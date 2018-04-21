@@ -1,19 +1,17 @@
 // zadanie 9.1
 
-var triangle1Area = getTriangleArea(13, 7);
-    triangle2Area = getTriangleArea(2, 5);
-    triangle3Area = getTriangleArea(8, 4);
-
 function getTriangleArea(a, h) {
-    if (a < 0 || h < 0) {
-        console.log('Nieprawidłowe dane');
+    if ((a >= 0) && (h >= 0)) {
+        var area = a * h / 2;
+        alert(area);
+        console.log(area);
+        }
+    else {
         alert('Nieprawidłowe dane');
-    }
-    else if (a >= 0 && h >= 0) {
-        return a * h / 2;
+        console.log('Nieprawidłowe dane')
     }
 }
-console.log(getTriangleArea(10, 6));
-console.log(triangle1Area);
-console.log(triangle2Area);
-console.log(triangle3Area);
+var triangleArea = getTriangleArea(10, 6),
+    triangle1Area = getTriangleArea(13, 7),
+    triangle2Area = getTriangleArea(-1, 1),
+    triangle3Area = getTriangleArea('abc', 1);
